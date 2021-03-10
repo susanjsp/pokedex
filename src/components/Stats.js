@@ -3,7 +3,7 @@ import React from 'react';
 function Stats({ stats, baseExp }) {
   const tableRows = stats.map(stat => {
     return(
-      <tr>
+      <tr key={stat.name}>
         <td><label htmlFor={stat.name} >{stat.name}</label></td>
         <td>{stat.value} / 120 </td>
         <td><progress name={stat.name} value={stat.value} max='120' /></td>

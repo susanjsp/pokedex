@@ -31,7 +31,6 @@ function Show() {
       })
     };
     fetchPokemonData();
-    console.log(pokemon.stats);
   }, [query]);
 
   const handleSubmit = event => {
