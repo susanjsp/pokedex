@@ -10,7 +10,9 @@ function PokedexCard({ pokemon }) {
     <div className='pokedex'>
       <h1>{pokemon.name}</h1>
       <img src={pokemon.sprite} alt={ `${pokemon.name} sprite` } />
-      <GeneralStats id={pokemon.id} height={pokemon.height} weight={pokemon.weight} types={pokemon.types}/>
+      <GeneralStats id={pokemon.id} height={pokemon.height}
+        weight={pokemon.weight} types={pokemon.types}
+        abilities={pokemon.abilities} />
       <RightImage name={pokemon.name} image={pokemon.image} />
       <Stats stats={pokemon.stats} baseExp={pokemon.baseExp} />
     </div>

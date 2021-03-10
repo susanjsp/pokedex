@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GeneralStats({ id, height, weight, types }) {
+function GeneralStats({ id, height, weight, types, abilities }) {
   const typesList = types.map(type => {
     return(
       <div key={type}>
@@ -8,6 +8,8 @@ function GeneralStats({ id, height, weight, types }) {
       </div>
     )
   })
+
+  const abilitiesString = abilities.join(', ');
 
   return(
     <div className='pokedex-general-stats'>
@@ -18,8 +20,8 @@ function GeneralStats({ id, height, weight, types }) {
           <td>{typesList}</td>
         </tr>
         <tr>
-          <td>Pokedex ID</td>
-          <td>{id}</td>
+          <td>Abilities</td>
+          <td>{abilitiesString}</td>
         </tr>
         <tr>
           <td>Height</td>
