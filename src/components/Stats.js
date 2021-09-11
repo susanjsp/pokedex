@@ -12,14 +12,17 @@ function Stats({ stats, baseExp }) {
   });
 
   return(
-    <table className='pokedex-stats'>
-      <tr>
-        <td><label htmlFor='baseExp' >Base exp</label></td>
-        <td>{baseExp} / 120 </td>
-        <td><progress name='baseExp' value={baseExp} max='120' /></td>
-      </tr>
-      {tableRows}
-    </table>
+    <>
+      <h3>Stats</h3>
+      <table className='pokedex-stats'>
+        <tr>
+          <td><label htmlFor='baseExp' >Base exp</label></td>
+          <td>{baseExp} / 120 </td>
+          <td><progress name='baseExp' value={baseExp} max='120' /></td>
+        </tr>
+        {tableRows}
+      </table>
+    </>
   )
 }
 

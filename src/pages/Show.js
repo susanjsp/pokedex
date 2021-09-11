@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import PokedexCard from '../components/PokedexCard';
+import PokedexCard from '../components/PokedexCard/PokedexCard';
 
 function Show() {
   const [ form, setForm ] = useState('');

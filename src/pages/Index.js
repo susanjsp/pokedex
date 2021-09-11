@@ -29,10 +29,14 @@ function Index() {
     setCurrentUrl(prevUrl);
   }
 
+  const pokemons = pokemonList.map(pokemon => {
+    return <li key={pokemon}>{pokemon}</li>;
+  });
+
   return(
     <div>
       <h1>Browse all pokemon</h1>
-      <PokemonList pokemonList={pokemonList} />
+      <ul>{pokemons}</ul>
       <Pagination
         nextPage={nextUrl ? nextPage : null}
         prevPage={prevUrl ? prevPage : null}
